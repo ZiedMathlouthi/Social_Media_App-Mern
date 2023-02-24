@@ -12,34 +12,36 @@ const Register = () => {
 
         <div>
           <form>
-            <div>
+            <div className="form-group">
               <label>Firstname</label>
-              <input type="text" />
+              <input className="input" type="text" />
             </div>
-            <div>
+            <div className="form-group">
               <label>Lastname</label>
-              <input type="text" />
+              <input className="input" type="text" />
             </div>
-            <div>
+            <div className="form-group">
               <label>Email</label>
-              <input type="email" />
+              <input className="input" type="email" />
             </div>
-            <div>
+            <div className="form-group">
               <label>Password</label>
-              <input type="password" />
+              <input className="input" type="password" />
             </div>
-            <div>
+            <div className="form-group">
               <label>Bio</label>
               <textarea></textarea>
             </div>
-            <div>
+            <div className="form-group">
               <label>Picture</label>
-              <input type="file" />
+              <input className="input" type="file" />
             </div>
-            <div>
+            <div className="form-group">
               <label>BirthDate</label>
-              <input type="date" />
+              <input className="input" type="date" />
             </div>
+
+            <button className="btn signup">Sign up</button>
           </form>
         </div>
       </div>
