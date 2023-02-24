@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Register = () => {
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [bio, setBio] = useState("");
+  const [birthdate, setBirthdate] = useState("");
+  const [picture, setPicture] = useState("");
+
   return (
     <div className="register">
       <div className="register-cover"></div>
@@ -14,23 +22,46 @@ const Register = () => {
           <form>
             <div className="form-group">
               <label>Firstname</label>
-              <input className="input" type="text" />
+              <input
+                className="input"
+                type="text"
+                value={firstname}
+                onChange={(e) => setFirstname(e.target.value)}
+              />
             </div>
             <div className="form-group">
               <label>Lastname</label>
-              <input className="input" type="text" />
+              <input
+                className="input"
+                type="text"
+                value={lastname}
+                onChange={(e) => setLastname(e.target.value)}
+              />
             </div>
             <div className="form-group">
               <label>Email</label>
-              <input className="input" type="email" />
+              <input
+                className="input"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
             <div className="form-group">
               <label>Password</label>
-              <input className="input" type="password" />
+              <input
+                className="input"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </div>
             <div className="form-group">
               <label>Bio</label>
-              <textarea></textarea>
+              <textarea
+                value={bio}
+                onChange={(e) => setBio(e.target.value)}
+              ></textarea>
             </div>
             <div className="form-group">
               <label>Picture</label>
@@ -38,7 +69,12 @@ const Register = () => {
             </div>
             <div className="form-group">
               <label>BirthDate</label>
-              <input className="input" type="date" />
+              <input
+                className="input"
+                type="date"
+                value={birthdate}
+                onChange={(e) => setBirthdate(e.target.value)}
+              />
             </div>
 
             <button className="btn signup">Sign up</button>
